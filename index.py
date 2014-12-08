@@ -6,7 +6,7 @@ import cgitb
 import swayzeBaby.py
 cgitb.enable()
 
-print "Content-Type: text/plain;charset=utf-8"
+print "Content-Type: text/html\n\n"
 print
 
 roadHouse = SwayzeBaby()
