@@ -13,7 +13,7 @@ import pprint
 
 class SwayzeBaby:
 
-	Swaykeys = ['Road%20House', "Ghost", 'dance', 'point%20Break', 'havana%20nights','dirty%20Dancing']
+	swaykeys = ['Road%20House', "Ghost", 'dance', 'point%20Break', 'havana%20nights','dirty%20Dancing']
 
 	def __init__(self, image=None):
 		if (image):
