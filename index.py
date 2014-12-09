@@ -18,7 +18,7 @@ print """<style>
 	.roadHouse {{ 
 		color: {0}; 
 	}} 
-	'.dirtyDancing {{ 
+	.dirtyDancing {{ 
 		color: {1}; 
 	}} 
 	.pointBreak {{ 
