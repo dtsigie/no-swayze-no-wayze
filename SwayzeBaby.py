@@ -47,8 +47,13 @@ class SwayzeBaby:
 				self.printItems(v, indent+1)
 			else:
 				if isinstance(v, list):
+					i = 0
+					print '  '*indent , '<li>', k, ':', '</li>'
 					for item in v:
+						print '  '*indent , '<li>', i, ':', '</li>'
+						i += 1
 						self.printItems(item, indent+1)
+						print '</br></br>'
 				else:
 					print ' '*indent , '<li>', k, ':', v, '</li>'
 		print '  '*indent + '</ul>\n'
