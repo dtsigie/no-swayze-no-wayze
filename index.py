@@ -15,18 +15,15 @@ print "<head>"
 print "<title>No Swayze No Wayze</title>"
 
 print """<style> 
-	.roadHouse {{ 
-		color: {0}; 
-	}} 
-	.dirtyDancing {{ 
-		color: {1}; 
-	}} 
-	.pointBreak {{ 
-		color: {2}; 
-	}} 
-	.ghost {{ 
-		color: {3}; 
-	}} 
+	body {{
+		background: repeating-linear-gradient(
+			to right,
+			{0} 100px,
+			{1} 100px,
+			{2} 100px,
+			{3} 100px,
+		);
+	}}
 	</style>""".format(colorScheme[0], colorScheme[1], colorScheme[2], colorScheme[3])
 print "</head>"
 
