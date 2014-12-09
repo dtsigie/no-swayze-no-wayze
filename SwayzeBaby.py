@@ -28,15 +28,15 @@ class SwayzeBaby:
 		#the Swayze. But hell, nobody puts baby in the corner... I surely can still get random pictures with sufficiently varied queries!
 		swayzeUrl = self.__nobodyPutsBabyInTheCorner()
 			
-		data = json.load(urllib2.urlopen(SwayzeUrl))
-		print json.dumps(jsonStr, sort_keys=True, indent=2, separators=(',', ': '))
+		data = json.load(urllib2.urlopen(swayzeUrl))
+		print json.dumps(data, sort_keys=True, indent=2, separators=(',', ': '))
 
 	#Generates a random Swayze related search query.
 	def __nobodyPutsBabyInTheCorner(self):
 		swayzeUrl = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=PATRICK%20SWAYZE";
-		howManyBabies = random.randInt(0,len(makeSomeBabies))
+		howManyBabies = random.randint(0,len(self.makeSomeBabies))
 		for i in range(1, howManyBabies):
-			swayzeUrl += "%20"  + random.choice(makeSomeBabies)
+			swayzeUrl += "%20"  + random.choice(self.makeSomeBabies)
 		return swayzeUrl
 
 
