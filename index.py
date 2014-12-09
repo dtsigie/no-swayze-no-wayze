@@ -16,13 +16,17 @@ print "<title>No Swayze No Wayze</title>"
 
 print """<style> 
 	body {{
-		background: repeating-linear-gradient(
+		background-image: linear-gradient(
 			to right,
-			{0} 100px,
-			{1} 100px,
-			{2} 100px,
-			{3} 100px,
+			{0},
+			{0} 25%,
+			{1} 25%,
+			{1} 50%,
+			{2} 50%,
+			{2} 75%,
+			{3} 75%
 		);
+	background-size: 100% 100%;
 	}}
 	</style>""".format(colorScheme[0], colorScheme[1], colorScheme[2], colorScheme[3])
 print "</head>"
