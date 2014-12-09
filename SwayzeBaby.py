@@ -7,9 +7,9 @@ class SwayzeBaby:
 		if (image):
 			self.image = image
 		else:
-			self.image = makeSomeSwayze()
+			self.image = self.makeSomeSwayze()
 
 	def makeSomeSwayze(self):
-
+		return
 	def getColorScheme(self):
 		return ("#000000", "#111111", "#FFFFFF", "#123456")
