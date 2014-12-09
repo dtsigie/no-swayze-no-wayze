@@ -30,6 +30,9 @@ class SwayzeBaby:
 			
 		data = json.load(urllib2.urlopen(swayzeUrl))
 		self.printItems(data, 0)
+
+		luckySwayze = random.randint(0, 3)
+		return data['responseData']['results'][luckySwayze]['url']
 	#Generates a random Swayze related search query.
 	def __nobodyPutsBabyInTheCorner(self):
 		swayzeUrl = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=PATRICK%20SWAYZE";

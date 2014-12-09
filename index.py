@@ -32,5 +32,7 @@ print "</head>"
 
 #Body stuff.
 print "<body>"
+
+print """<img src='{0}'></img> """.format(roadHouse.image)
 #Put swayze in center, baby.
 print "</body>"
