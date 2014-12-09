@@ -44,12 +44,13 @@ class SwayzeBaby:
 		for k,v in dictObj.iteritems():
 			if isinstance(v, dict):
 				print '  '*indent , '<li>', k, ':', '</li>'
-				printItems(v, indent+1)
+				self.printItems(v, indent+1)
 			else:
 				if isinstance(v, list):
-					for item in list:
-						printItems(item, indent+1)
-				print ' '*indent , '<li>', k, ':', v, '</li>'
+					for item in v:
+						self.printItems(item, indent+1)
+				else:
+					print ' '*indent , '<li>', k, ':', v, '</li>'
 		print '  '*indent + '</ul>\n'
 
 	#Turns self.image into a histogram to generate. 
