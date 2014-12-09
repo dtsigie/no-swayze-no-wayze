@@ -29,7 +29,7 @@ class SwayzeBaby:
 		swayzeUrl = self.__nobodyPutsBabyInTheCorner()
 			
 		data = json.load(urllib2.urlopen(swayzeUrl))
-		printItems(data, 0)
+		self.printItems(data, 0)
 	#Generates a random Swayze related search query.
 	def __nobodyPutsBabyInTheCorner(self):
 		swayzeUrl = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=PATRICK%20SWAYZE";
@@ -40,18 +40,14 @@ class SwayzeBaby:
 
 	#Since formatting is hard in html + python.
 	def printItems(dictObj, indent):
-    print '  '*indent + '<ul>\n'
-    for k,v in dictObj.iteritems():
-        if isinstance(v, dict):
-            print '  '*indent , '<li>', k, ':', '</li>'
-            printItems(v, indent+1)
-        else:
-            print ' '*indent , '<li>', k, ':', v, '</li>'
-    print '  '*indent + '</ul>\n'
-
-printItems(z,0)
-
-
+	print '  '*indent + '<ul>\n'
+	for k,v in dictObj.iteritems():
+		if isinstance(v, dict):
+			print '  '*indent , '<li>', k, ':', '</li>'
+			printItems(v, indent+1)
+		else:
+			print ' '*indent , '<li>', k, ':', v, '</li>'
+	print '  '*indent + '</ul>\n'
 
 	#Turns self.image into a histogram to generate. 
 	def getColorScheme(self):
