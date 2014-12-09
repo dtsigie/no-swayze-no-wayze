@@ -39,13 +39,16 @@ class SwayzeBaby:
 		return swayzeUrl
 
 	#Since formatting is hard in html + python.
-	def printItems(dictObj, indent):
+	def printItems(self, dictObj, indent):
 		print '  '*indent + '<ul>\n'
 		for k,v in dictObj.iteritems():
 			if isinstance(v, dict):
 				print '  '*indent , '<li>', k, ':', '</li>'
 				printItems(v, indent+1)
 			else:
+				if isinstance(v, list):
+					for item in list:
+						printItems(item, indent+1)
 				print ' '*indent , '<li>', k, ':', v, '</li>'
 		print '  '*indent + '</ul>\n'
 
