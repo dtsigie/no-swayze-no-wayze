@@ -6,7 +6,6 @@
 import urllib2
 # import re
 import random
-import requests
 
 import json
 import pprint
@@ -23,7 +22,7 @@ class SwayzeBaby:
 			self.image = self.makeSomeSwayze()
 			while True:
 				try:
-					image_r = requests.get(self.image)
+					image_r = urllib2.urlopen(self.image)
 					break
 				except ConnectionError, e:
 					self.image = self.makeSomeSwayze()
