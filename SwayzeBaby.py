@@ -24,7 +24,7 @@ class SwayzeBaby:
 				try:
 					image_r = urllib2.urlopen(self.image)
 					break
-				except ConnectionError, e:
+				except e:
 					self.image = self.makeSomeSwayze()
 	
 	# Returns an image of Swayze the man Swayze baby.
