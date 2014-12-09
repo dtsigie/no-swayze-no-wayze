@@ -29,7 +29,7 @@ class SwayzeBaby:
 		swayzeUrl = self.__nobodyPutsBabyInTheCorner()
 			
 		data = json.load(urllib2.urlopen(swayzeUrl))
-		self.printItems(data, 0)
+		#self.printItems(data, 0)
 
 		luckySwayze = random.randint(0, 3)
 		return data['responseData']['results'][luckySwayze]['url']
