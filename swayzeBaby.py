@@ -1,4 +1,8 @@
-class SwayzeBaby.py:
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+# enable debugging
+class SwayzeBaby:
 	def __init__(self, image=None):
 		if (image):
 			self.image = image

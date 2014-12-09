@@ -3,7 +3,7 @@
 
 # enable debugging
 import cgitb
-import swayzeBaby.py
+import swayzeBaby
 cgitb.enable()
 
 print "Content-Type: text/html\n\n"
