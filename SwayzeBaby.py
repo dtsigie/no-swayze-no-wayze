@@ -40,14 +40,14 @@ class SwayzeBaby:
 
 	#Since formatting is hard in html + python.
 	def printItems(dictObj, indent):
-	print '  '*indent + '<ul>\n'
-	for k,v in dictObj.iteritems():
-		if isinstance(v, dict):
-			print '  '*indent , '<li>', k, ':', '</li>'
-			printItems(v, indent+1)
-		else:
-			print ' '*indent , '<li>', k, ':', v, '</li>'
-	print '  '*indent + '</ul>\n'
+		print '  '*indent + '<ul>\n'
+		for k,v in dictObj.iteritems():
+			if isinstance(v, dict):
+				print '  '*indent , '<li>', k, ':', '</li>'
+				printItems(v, indent+1)
+			else:
+				print ' '*indent , '<li>', k, ':', v, '</li>'
+		print '  '*indent + '</ul>\n'
 
 	#Turns self.image into a histogram to generate. 
 	def getColorScheme(self):
