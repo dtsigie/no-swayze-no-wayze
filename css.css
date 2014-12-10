@@ -1,3 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900);
+
+body {
+  font-family: 'Cinzel Decorative', cursive;
+/*  background: url(http://s.cdpn.io/3/blurry-blue.jpg);
+  background-size: cover;
+  color: white;*/
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+.embiggen {
+  font-size: 4em;
+  text-shadow: 0 0 40px #ffbab3;
+}
+article {
+  max-width: 600px;
+  overflow: hidden;
+  margin: 0 auto 50px;
+}
+
+.subtitle {
+  margin: 0 0 2em 0;
+}
 .fancy {
   line-height: 0.5;
   text-align: center;
@@ -23,4 +49,22 @@
 .fancy span:after {
   left: 100%;
   margin-left: 15px;
+}
+.amp {
+  margin: 0 0 0.25em 0;
+}
+.amp span {
+  font-size: 0.7em;
+}
+
+.copy {
+  font: 1em Georgia, Serif;
+  text-align: justify;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+}
+.copy p {
+  margin: 0 0 1em 0;
 }
