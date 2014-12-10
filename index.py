@@ -34,15 +34,10 @@ print "</head>"
 print "<body>"
 print """
 	<header>
-		<h1>No Swayze No Wayze</h1>
-		<p class='subtitle fancy'><span>No one puts Swayze color schemes in the corner</span></p>
-		<div class='copy'>
-			<p>some p text, weeee </p>
-		</div>
 	</header>
 
 """
 
-print """<img src='{0}'></img> """.format(roadHouse.image)
+print """<img src='{0}' align='middle'></img> """.format(roadHouse.image)
 #Put swayze in center, baby.
 print "</body>"
