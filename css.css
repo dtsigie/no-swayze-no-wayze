@@ -1,10 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900);
 
-body {
+header {
   font-family: 'Cinzel Decorative', cursive;
-/*  background: url(http://s.cdpn.io/3/blurry-blue.jpg);
-  background-size: cover;
-  color: white;*/
+  /*background-size: cover;*/
+  color: white;
 }
 
 h1 {
@@ -37,8 +36,8 @@ article {
   content: "";
   position: absolute;
   height: 5px;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   top: 0;
   width: 600px;
 }

@@ -33,11 +33,13 @@ print "</head>"
 #Body stuff.
 print "<body>"
 print """
-	<h1>No Swayze No Wayze</h1>
-	<p class='subtitle fancy'><span>No one puts Swayze color schemes in the corner</span></p>
-	<div class='copy'>
-		<p>some p text, weeee </p>
-	</div>
+	<header>
+		<h1>No Swayze No Wayze</h1>
+		<p class='subtitle fancy'><span>No one puts Swayze color schemes in the corner</span></p>
+		<div class='copy'>
+			<p>some p text, weeee </p>
+		</div>
+	</header>
 
 """
 
