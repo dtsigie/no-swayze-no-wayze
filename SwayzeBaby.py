@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 # enable debugging
-import cv2
+#import cv2
 import urllib2
 import numpy
 # import re
