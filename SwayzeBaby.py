@@ -71,3 +71,24 @@ class SwayzeBaby:
 	#Turns self.image into a histogram to generate. 
 	def getColorScheme(self):
 		return ("#D5A253", "#301F0D", "#936A4A", "#B85750")
+
+	#Returns out html-parseable css involving our color schemes.
+	def CSSwayze(self):
+		colorScheme = this.getColorScheme()
+		css = """<style> 
+		body {{
+			background-image: linear-gradient(
+				to right,
+				{0},
+				{0} 25%,
+				{1} 25%,
+				{1} 50%,
+				{2} 50%,
+				{2} 75%,
+				{3} 75%
+			);
+		background-size: 100% 100%;
+		}}
+		</style>""".format(colorScheme[0], colorScheme[1], colorScheme[2], colorScheme[3])
+
+		return css
