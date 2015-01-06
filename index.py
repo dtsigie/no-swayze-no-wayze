@@ -16,7 +16,7 @@ print '<link rel="stylesheet" type="text/css" href="css.css">'
 print """<style> 
 	body {{
 		background-image: linear-gradient(
-			to right,
+			45deg,
 			{0},
 			{0} 25%,
 			{1} 25%,

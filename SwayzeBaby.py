@@ -70,4 +70,4 @@ class SwayzeBaby:
 
 	#Turns self.image into a histogram to generate. 
 	def getColorScheme(self):
-		return ("#000000", "#111111", "#333333", "#123456")
+		return ("#D5A253", "#301F0D", "#936A4A", "#B85750")
