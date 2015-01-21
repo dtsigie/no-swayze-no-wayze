@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# enable debugging
 #import cv2
+# enable debugging
 import urllib2
 import numpy
 # import re
@@ -92,3 +92,7 @@ class SwayzeBaby:
 		</style>""".format(colorScheme[0], colorScheme[1], colorScheme[2], colorScheme[3])
 
 		return css
+
+	#Takes in a data dictionary and inserts that into our database. Called from the data collection function.
+	def penetrateSwayze(self, data):
+		return
