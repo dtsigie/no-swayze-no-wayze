@@ -74,7 +74,7 @@ class SwayzeBaby:
 
 	#Returns out html-parseable css involving our color schemes.
 	def CSSwayze(self):
-		colorScheme = this.getColorScheme()
+		colorScheme = self.getColorScheme()
 		css = """<style> 
 		body {{
 			background-image: linear-gradient(
