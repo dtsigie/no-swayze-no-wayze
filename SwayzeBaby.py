@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: UTF-8 -*-
+#!/usr/bin/env python # -*- coding: UTF-8 -*-
 
 #import cv2
 # enable debugging
@@ -10,6 +9,9 @@ import random
 
 import json
 import pprint
+
+#Keep our db stuff wrapped up in a hidden class. We are putting baby in the corner.
+from corner.py import Corner
 
 
 class SwayzeBaby:
@@ -69,7 +71,7 @@ class SwayzeBaby:
 		print '  '*indent + '</ul>\n'
 
 	#Turns self.image into a histogram to generate. 
-	def getColorScheme(self):
+	def getColorScheme(self, url):
 		return ("#D5A253", "#301F0D", "#936A4A", "#B85750")
 
 	#Returns out html-parseable css involving our color schemes.
@@ -95,4 +97,21 @@ class SwayzeBaby:
 
 	#Takes in a data dictionary and inserts that into our database. Called from the data collection function.
 	def penetrateSwayze(self, data):
-		return
+		for result in data:
+			#Make a new instance of our db wrapper.
+			corner = new Corner()
+			url = result['url']
+			title = result['title']
+
+			query = "INSERT INTO swayze (url, title, fake) VALUES ('{0}', '{1}', {2})".format(url, title, 0)
+			corner.query(query)
+
+			id = corner.lastInsert()
+			colors = self.getColorScheme(url)
+
+			for (color in colors):
+				query = "INSERT INTO colors (swayze_id, color, frequency, fake) VALUES ({0}, '{1}', {2}, {3})".format(lastId, color, 0.0, 0)
+				corner.query(query)
+				
+				
+			
