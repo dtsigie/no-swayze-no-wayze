@@ -12,6 +12,7 @@ import pprint
 
 #Keep our db stuff wrapped up in a hidden class. We are putting baby in the corner.
 from corner.py import Corner
+from key.py import Key
 
 
 class SwayzeBaby:
@@ -94,6 +95,42 @@ class SwayzeBaby:
 		</style>""".format(colorScheme[0], colorScheme[1], colorScheme[2], colorScheme[3])
 
 		return css
+
+	# Retruns an image dictionary with image url as key and title as values - collected from bing search
+	def fetchAllSwayze(query):
+    	ourKey = Key()
+        key = ourKey.getKey()
+        
+        query = urllib.quote(query)
+        skip = 0
+        imageDict = {}
+        while True:
+    	 # create credential for authentication
+	    	user_agent = 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; FDM; .NET CLR 2.0.50727; InfoPath.2; .NET CLR 1.1.4322)'
+	    	credentials = (':%s' % key).encode('base64')[:-1]
+	    	auth = 'Basic %s' % credentials
+		    url = 'https://api.datamarket.azure.com/Data.ashx/Bing/Search/Image?$top=50&$format=json&$skip='+ skip + '&Query=' + query 
+		    request = urllib2.Request(url)
+		    request.add_header('Authorization', auth)
+		    request.add_header('User-Agent', user_agent)
+		    request_opener = urllib2.build_opener()
+		    response = request_opener.open(request) 
+		    response_data = response.read()
+		    json_result = json.loads(response_data)
+		    result_list = json_result['d']['results']
+		    #extracts results from each page
+		    for i in range (0,49):
+	    		title = result_list[i]['Title']
+	    	 	imageUrl = result_list[i]['MediaUrl']
+	    		imageDict[imageUrl] = title
+		    
+		    skip +=50
+		    if skip > 1000
+		    	break
+	    
+	    
+	    #print imageDict
+	    return imageDict
 
 	#Takes in a data dictionary and inserts that into our database. Called from the data collection function.
 	def penetrateSwayze(self, data):
