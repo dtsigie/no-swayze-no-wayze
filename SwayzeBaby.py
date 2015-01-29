@@ -2,34 +2,36 @@
 
 #import cv2
 # enable debugging
+import urllib
 import urllib2
-import numpy
+
+# import numpy
 # import re
 import random
 
 import json
-import pprint
+# import pprint
 
 #Keep our db stuff wrapped up in a hidden class. We are putting baby in the corner.
-from corner.py import Corner
-from key.py import Key
+from corner import Corner
+from keys.key import Key
 
 
 class SwayzeBaby:
-
 	swaykeys = ['Road%20House', "Ghost", 'dance', 'point%20Break', 'havana%20nights','dirty%20Dancing']
 
 	def __init__(self, image=None):
-		if (image):
-			self.image = image
-		else:
-			self.image = self.makeSomeSwayze()
-			while True:
-				try:
-					image_r = urllib2.urlopen(self.image)
-					break
-				except:
-					self.image = self.makeSomeSwayze()
+		return
+		# if (image):
+		# 	self.image = image
+		# else:
+		# 	self.image = self.makeSomeSwayze()
+		# 	while True:
+		# 		try:
+		# 			image_r = urllib2.urlopen(self.image)
+		# 			break
+		# 		except:
+		# 			self.image = self.makeSomeSwayze()
 	
 	# Returns an image of Swayze the man Swayze baby.
 	def makeSomeSwayze(self):
@@ -52,24 +54,24 @@ class SwayzeBaby:
 		return swayzeUrl
 
 	#Since formatting is hard in html + python.
-	def printItems(self, dictObj, indent):
-		print '  '*indent + '<ul>\n'
-		for k,v in dictObj.iteritems():
-			if isinstance(v, dict):
-				print '  '*indent , '<li>', k, ':', '</li>'
-				self.printItems(v, indent+1)
-			else:
-				if isinstance(v, list):
-					i = 0
-					print '  '*indent , '<li>', k, ':', '</li>'
-					for item in v:
-						print '  '*indent , '<li>', i, ':', '</li>'
-						i += 1
-						self.printItems(item, indent+1)
-						print '</br></br>'
-				else:
-					print ' '*indent , '<li>', k, ':', v, '</li>'
-		print '  '*indent + '</ul>\n'
+	# def printItems(self, dictObj, indent=" "):
+	# 	print '  '*indent + '<ul>\n'
+	# 	for k,v in dictObj.iteritems():
+	# 		if isinstance(v, dict):
+	# 			print '  '*indent , '<li>', k, ':', '</li>'
+	# 			self.printItems(v, indent+1)
+	# 		else:
+	# 			if isinstance(v, list):
+	# 				i = 0
+	# 				print '  '*indent , '<li>', k, ':', '</li>'
+	# 				for item in v:
+	# 					print '  '*indent , '<li>', i, ':', '</li>'
+	# 					i += 1
+	# 					self.printItems(item, indent+1)
+	# 					print '</br></br>'
+	# 			else:
+	# 				print ' '*indent , '<li>', k, ':', v, '</li>'
+	# 	print '  '*indent + '</ul>\n'
 
 	#Turns self.image into a histogram to generate. 
 	def getColorScheme(self, url):
@@ -97,58 +99,62 @@ class SwayzeBaby:
 		return css
 
 	# Retruns an image dictionary with image url as key and title as values - collected from bing search
-	def fetchAllSwayze(query):
-    	ourKey = Key()
-        key = ourKey.getKey()
-        
-        query = urllib.quote(query)
-        skip = 0
-        imageDict = {}
-        while True:
-    	 # create credential for authentication
-	    	user_agent = 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; FDM; .NET CLR 2.0.50727; InfoPath.2; .NET CLR 1.1.4322)'
-	    	credentials = (':%s' % key).encode('base64')[:-1]
-	    	auth = 'Basic %s' % credentials
-		    url = 'https://api.datamarket.azure.com/Data.ashx/Bing/Search/Image?$top=50&$format=json&$skip='+ skip + '&Query=' + query 
-		    request = urllib2.Request(url)
-		    request.add_header('Authorization', auth)
-		    request.add_header('User-Agent', user_agent)
-		    request_opener = urllib2.build_opener()
-		    response = request_opener.open(request) 
-		    response_data = response.read()
-		    json_result = json.loads(response_data)
-		    result_list = json_result['d']['results']
-		    #extracts results from each page
-		    for i in range (0,49):
-	    		title = result_list[i]['Title']
-	    	 	imageUrl = result_list[i]['MediaUrl']
-	    		imageDict[imageUrl] = title
-		    
-		    skip +=50
-		    if skip > 1000
-		    	break
-	    
-	    
-	    #print imageDict
-	    return imageDict
+	def fetchAllSwayze(self, query):
+		ourKey = Key()
+		key = ourKey.getKey()
+		
+		query = urllib.quote(query)
+		skip = 0
+		imageDict = {}
+		while True:
+			 # create credential for authentication
+			user_agent = 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; FDM; .NET CLR 2.0.50727; InfoPath.2; .NET CLR 1.1.4322)'
+			credentials = (':%s' % key).encode('base64')[:-1]
+			auth = 'Basic %s' % credentials
+			url = 'https://api.datamarket.azure.com/Data.ashx/Bing/Search/Image?$top=50&$format=json&$skip='+ str(skip) + '&Query=%27' + query +'%27'
+			request = urllib2.Request(url)
+			request.add_header('Authorization', auth)
+			request.add_header('User-Agent', user_agent)
+			request_opener = urllib2.build_opener()
+			response = request_opener.open(request) 
+			response_data = response.read()
+			json_result = json.loads(response_data)
+			result_list = json_result['d']['results']
+			 #extracts results from each page
+			
+			#print result_list[5]['Title']
+			# print result_list[49]['MediaUrl']
+
+			for i in range (0,49):
+				title = result_list[i]['Title']
+				imageUrl = result_list[i]['MediaUrl']
+				imageDict[imageUrl] = title
+				skip +=50
+			if skip > 1000:
+				break
+
+		
+		
+		#print imageDict
+		return imageDict
 
 	#Takes in a data dictionary and inserts that into our database. Called from the data collection function.
-	def penetrateSwayze(self, data):
-		for result in data:
-			#Make a new instance of our db wrapper.
-			corner = new Corner()
-			url = result['url']
-			title = result['title']
+	# def penetrateSwayze(self, data):
+	# 	for result in data:
+	# 		#Make a new instance of our db wrapper.
+	# 		corner = new Corner()
+	# 		url = result['url']
+	# 		title = result['title']
 
-			query = "INSERT INTO swayze (url, title, fake) VALUES ('{0}', '{1}', {2})".format(url, title, 0)
-			corner.query(query)
+	# 		query = "INSERT INTO swayze (url, title, fake) VALUES ('{0}', '{1}', {2})".format(url, title, 0)
+	# 		corner.query(query)
 
-			id = corner.lastInsert()
-			colors = self.getColorScheme(url)
+	# 		id = corner.lastInsert()
+	# 		colors = self.getColorScheme(url)
 
-			for (color in colors):
-				query = "INSERT INTO colors (swayze_id, color, frequency, fake) VALUES ({0}, '{1}', {2}, {3})".format(lastId, color, 0.0, 0)
-				corner.query(query)
+	# 		for (color in colors):
+	# 			query = "INSERT INTO colors (swayze_id, color, frequency, fake) VALUES ({0}, '{1}', {2}, {3})".format(lastId, color, 0.0, 0)
+	# 			corner.query(query)
 				
 				
 			
