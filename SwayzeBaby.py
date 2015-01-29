@@ -124,14 +124,16 @@ class SwayzeBaby:
 			
 			#print result_list[5]['Title']
 			# print result_list[49]['MediaUrl']
-
-			for i in range (0,49):
-				title = result_list[i]['Title']
-				imageUrl = result_list[i]['MediaUrl']
-				imageDict[imageUrl] = title
+			try:
+				for i in range (0,49):
+					title = result_list[i]['Title']
+					imageUrl = result_list[i]['MediaUrl']
+					imageDict[imageUrl] = title
 				skip +=50
-			if skip > 1000:
-				break
+				if skip > 1000:
+					break
+			except(IndexError):
+				return imageDict
 
 		
 		
