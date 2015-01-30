@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from SwayzeBaby import SwayzeBaby
-from corner import Corner 
-
+from corner import Corner
+import urllib 
 
 swayze = SwayzeBaby()
 corner = Corner()
@@ -13,10 +13,11 @@ for keyword in swaykeys:
 	for key, value in results.iteritems():
 		url = key
 		title = value
-		url = url.encode('ascii', 'ignore')
-		title = title.encode('ascii', 'ignore')
-		title = title.replace('"', '\\"')
-		title = title.replace("'", "\\'")
-		query = "INSERT INTO swayze (url, title, fake) VALUES ('{0}', '{1}', {2})".format(url, title, 0)
-		corner.query(query)
+		# url = urllib.unquote(url)
+		# title = urllib.unquote(title)
+		# title = title.encode('ascii', 'ignore')
+		# title = title.replace('"', '\\"')
+		# title = title.replace("'", "\\'")
+		query = "INSERT INTO swayze (url, title) VALUES (%s, %s)"
+		corner.cur.execute(query, (url, title ) )
 
