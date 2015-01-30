@@ -186,8 +186,6 @@ class SwayzeBaby:
 					break
 			except(IndexError):
 				return imageDict
-
-		
 		
 		#print imageDict
 		return imageDict
