@@ -13,7 +13,11 @@ for keyword in swaykeys:
 	for key, value in results.iteritems():
 		url = key
 		title = value
-		title = title.replace('"', '\\"')
-		title = title.replace("'", "\\'")
+		url = url.encode('ascii', 'ignore')
+		title = title.encode('ascii', 'ignore')
+		# title = title.replace('"', '\\"')
+		# title = title.replace("'", "\\'")
 		query = "INSERT INTO swayze (url, title, fake) VALUES ('{0}', '{1}', {2})".format(url, title, 0)
+
+
 		# corner.query(query)
