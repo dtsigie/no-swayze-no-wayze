@@ -140,23 +140,7 @@ class SwayzeBaby:
 		#print imageDict
 		return imageDict
 
-	#Takes in a data dictionary and inserts that into our database. Called from the data collection function.
-	# def penetrateSwayze(self, data):
-	# 	for result in data:
-	# 		#Make a new instance of our db wrapper.
-	# 		corner = new Corner()
-	# 		url = result['url']
-	# 		title = result['title']
 
-	# 		query = "INSERT INTO swayze (url, title, fake) VALUES ('{0}', '{1}', {2})".format(url, title, 0)
-	# 		corner.query(query)
-
-	# 		id = corner.lastInsert()
-	# 		colors = self.getColorScheme(url)
-
-	# 		for (color in colors):
-	# 			query = "INSERT INTO colors (swayze_id, color, frequency, fake) VALUES ({0}, '{1}', {2}, {3})".format(lastId, color, 0.0, 0)
-	# 			corner.query(query)
 				
 				
 			
