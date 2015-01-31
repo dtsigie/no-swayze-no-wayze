@@ -15,10 +15,13 @@ for keyword in swaykeys:
 		url = key
 		title = value
 		# url = urllib.unquote(url)
-		# title = urllib.unquote(title)
-		# title = title.encode('ascii', 'ignore')
-		# title = title.replace('"', '\\"')
-		# title = title.replace("'", "\\'")
-		query = "INSERT INTO swayze (url, title) VALUES (%s, %s)"
-		corner.cur.execute(query, (url, title ) )
+		try:
+			title = urllib.unquote(title)
+			title = title.encode('ascii', 'ignore')
+			title = title.replace('"', '\\"')
+			title = title.replace("'", "\\'")
+			query = "INSERT INTO swayze (url, title) VALUES (%s, %s)"
+			corner.cur.execute(query, (url, title ) )
+		except(UnicodeEncodeError):
+			continue
 
