@@ -1,10 +1,10 @@
 #!/usr/bin/env python # -*- coding: UTF-8 -*-
 
 #import cv2, the sklearn kmeans function, and numpy
-# from sklearn.cluster import KMeans
-# import numpy as np
-# import cv2
-# enable debugging
+from sklearn.cluster import KMeans
+import numpy as np
+import cv2
+enable debugging
 import urllib
 import urllib2
 
