@@ -78,13 +78,13 @@ class SwayzeBaby:
 
 	#Turns self.image into a histogram to generate. 
 	def getColorScheme(self, url):
-                
-                req = urllib.urlopen(url)
-                arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
-                img = cv2.imdecode(arr,-1)
-
-                # load the image and convert it from BGR to RGB
                 try: 
+                        req = urllib2.urlopen(url)
+                        arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
+                        img = cv2.imdecode(arr,-1)
+
+                        # load the image and convert it from BGR to RGB
+                
                         image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
                         # reshape the image to be a list of pixels
                         image = image.reshape((-1, 3))
@@ -109,7 +109,7 @@ class SwayzeBaby:
 
                         # show our color bart
                         return colors
-                except cv2.error as e:
+                except (urllib2.HTTPError, urllib2.URLError, cv2.error) as e:
                         print("Image processing failed. Moving on...")
                         
                         
