@@ -96,7 +96,7 @@ class SwayzeBaby:
 
                         # show our color bart
                         return colors
-		                except (urllib2.HTTPError, urllib2.URLError, cv2.error) as e:
+		except (urllib2.HTTPError, urllib2.URLError, cv2.error) as e:
 
                         print("Image processing failed. Moving on...")
                         
