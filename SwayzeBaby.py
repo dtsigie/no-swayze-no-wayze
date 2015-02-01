@@ -1,9 +1,9 @@
 #!/usr/bin/env python # -*- coding: UTF-8 -*-
 
 #import cv2, the sklearn kmeans function, and numpy
-from sklearn.cluster import KMeans
-import numpy as np
-import cv2
+# from sklearn.cluster import KMeans
+# import numpy as np
+# import cv2
 ##enable debugging
 import urllib
 import urllib2
@@ -27,28 +27,28 @@ class SwayzeBaby:
 		return
 
 	def getRandSwayzeColors(self):
-		query = """
-		SELECT color.swayze_id FROM colors WHERE colors.fake = 0
-		ORDER BY RAND()
-		LIMIT 1
-		"""
-		corner = Corner()
-		corner.cur.execute(query)
+		return ['http://home.comcast.net/~patrick.swayze/patrickcloseup.jpg', "#123456", "#223344", "445566"]
+		# query = """
+		# SELECT swayze.url, colors.color FROM swayze INNER JOIN colors on swayze.id = colors.swayze_id WHERE colors.fake = 0
+		# ORDER BY RAND()
+		# LIMIT 10
+		# """
+		# corner = Corner()
+		# corner.cur.execute(query)
 
-		for row in corner.cur:
-			swayze_id = row[0]
+		# for row in corner.cur:
+		# 	swayze_id = row[0]
 
-		query = """
-			
-		"""
+		# query = "SELECT color FROM colors WHERE id = " + swayze_id 
 
+		# corner.cur.execute(query)
 
-		colors = []
-		colors.append(url)
-		corner.cur.execute("SELECT color FROM colors WHERE swayze_id = " + swayze_id)
-		for row in corner.cur:
-			colors.append(row[0])
-		return colors
+		# colors = []
+		# colors.append(url)
+		# corner.cur.execute("SELECT color FROM colors WHERE swayze_id = " + swayze_id)
+		# for row in corner.cur:
+		# 	colors.append(row[0])
+		# return colors
 
 
 

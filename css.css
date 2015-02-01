@@ -1,0 +1,12 @@
+#container{
+    width:100%; 
+}
+
+.box {
+    margin: 0 auto; width: 960px;
+    height: 400px;
+}
+
+.bigLetters {
+	font-size: 300%;
+}

@@ -11,7 +11,7 @@ roadHouse = SwayzeBaby()
 
 print "<head>"
 print "<title>No Swayze No Wayze</title>"
-# print '<link rel="stylesheet" type="text/css" href="css.css">'
+print '<link rel="stylesheet" type="text/css" href="css.css">'
 # print roadHouse.CSSwayze()
 print "</head>"
 
@@ -19,8 +19,29 @@ print "</head>"
 print "<body>"
 print "<div id='container'>"
 colors = roadHouse.getRandSwayzeColors()
-for (color in colors):
-	
+url = colors[0]
+color1 = colors[1]
+color2 = colors[2]
+color3 = colors[3]
+print "<div id='swayzeImage' class='box'>"
+print "<img src='" + url + "></img>" 
+print "</div>"
+
+print "<div id='box1' class='box'>"
+print "<span class='bigLetters'>ABOUT SWAYZE</span>"
+print "</div>"
+
+print "<div id='box2' class='box'>"
+print "<span class='bigLetters'>HISTOSWAYZE</span>"
+print "</div>"
+
+print "<div id='box3' class='box'>"
+print "<span class='bigLetters'>STREAMSWAYZE</span>"
+print "</div>"
+
+
+# for (color in colors):
+
 	# Print """<img src='{0}' align='middle'></img> """.format(roadHouse.image)
 	# Put swayze in center, baby.
 
