@@ -23,8 +23,8 @@ url = colors[0]
 color1 = colors[1]
 color2 = colors[2]
 color3 = colors[3]
-print "<div id='swayzeImage' class='box'>"
-print "<img src='" + url + "></img>" 
+print "<div id='swayzeImage' align='middle' class='box'>"
+print "<img src='" + url + "'></img>" 
 print "</div>"
 
 print "<div id='box1' class='box'>"
