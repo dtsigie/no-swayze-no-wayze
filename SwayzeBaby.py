@@ -4,7 +4,7 @@
 from sklearn.cluster import KMeans
 import numpy as np
 import cv2
-enable debugging
+##enable debugging
 import urllib
 import urllib2
 
@@ -78,58 +78,46 @@ class SwayzeBaby:
 
 	#Turns self.image into a histogram to generate. 
 	def getColorScheme(self, url):
+                
+                req = urllib.urlopen(url)
+                arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
+                img = cv2.imdecode(arr,-1)
 
-		req = urllib.urlopen(url)
-		arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
-		img = cv2.imdecode(arr,-1)
+                # load the image and convert it from BGR to RGB
+                try: 
+                        image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                        # reshape the image to be a list of pixels
+                        image = image.reshape((-1, 3))
 
-		# load the image and convert it from BGR to RGB
-		image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                                # cluster the pixel intensities
+                        clt = KMeans(n_clusters = 3)
+                        clt.fit(image)
 
-
-		# reshape the image to be a list of pixels
-		image = image.reshape((-1, 3))
-
-			# cluster the pixel intensities
-		clt = KMeans(n_clusters = 4)
-		clt.fit(image)
-
-			# build a histogram of clusters and then create a figure
-			# representing the number of pixels labeled to each color
-		hist = centroid_histogram(clt)
-		hist = clt.cluster_centers_
-		colors = list()
-		for x in range(0,4):
-			r = hist[x][0].astype(np.int64)
-			g = hist[x][1].astype(np.int64)
-			b = hist[x][2].astype(np.int64)
-			hex = "#{0:02x}{1:02x}{2:02x}".format(clamp(r), clamp(g), clamp(b))
-			colors.append(hex)        
-
-
-
-		# show our color bart
-		return colors
+                                # build a histogram of clusters and then create a figure
+                                # representing the number of pixels labeled to each color
+                        hist = centroid_histogram(clt)
+                        hist = clt.cluster_centers_
+                        colors = list()
+                        for x in range(0,3):
+                                r = hist[x][0].astype(np.int64)
+                                g = hist[x][1].astype(np.int64)
+                                b = hist[x][2].astype(np.int64)
+                                hex = "#{0:02x}{1:02x}{2:02x}".format(clamp(r), clamp(g), clamp(b))
+                                colors.append(hex)        
 
 
 
-	def centroid_histogram(clt):
-		# grab the number of different clusters and create a histogram
-		# based on the number of pixels assigned to each cluster
-		numLabels = len(np.unique(clt.labels_))
-		(hist, _) = np.histogram(clt.cluster_centers_, bins = numLabels)
-		
+                        # show our color bart
+                        return colors
+                except cv2.error as e:
+                        print("Image processing failed. Moving on...")
+                        
+                        
+              
 
-		# normalize the histogram, such that it sums to one
-		hist = hist.astype("float")
-		hist /= hist.sum()
 
-		# return the histogram
-		return hist
 
-##      Helper function for string formatting
-	def clamp(x): 
-		return max(0, min(x, 255))
+	
 
 
 	#Returns out html-parseable css involving our color schemes.
@@ -195,5 +183,21 @@ class SwayzeBaby:
 
 
 				
-				
+def centroid_histogram(clt):
+        # grab the number of different clusters and create a histogram
+        # based on the number of pixels assigned to each cluster
+        numLabels = len(np.unique(clt.labels_))
+        (hist, _) = np.histogram(clt.cluster_centers_, bins = numLabels)
+        
+
+        # normalize the histogram, such that it sums to one
+        hist = hist.astype("float")
+        hist /= hist.sum()
+
+        # return the histogram
+        return hist
+
+##      Helper function for string formatting
+def clamp(x): 
+	return max(0, min(x, 255))				
 			
