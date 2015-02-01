@@ -8,7 +8,8 @@ x = 1
 swayze = SwayzeBaby()
 selector = Corner()
 insertor = Corner()
-selector.query("SELECT id, url FROM swayze where fake=0")
+startId = 0
+selector.query("SELECT id, url FROM swayze where fake=0 AND id >= " + startId)
 for row in selector.cur:
    swayze_id = row[0]
    url = row[1]
@@ -18,8 +19,8 @@ for row in selector.cur:
    else:
       for color in colors:
          query = "INSERT INTO colors (swayze_id, color) VALUES (%s, %s)"
-##	   insertor.cur.execute(query, (swayze_id, color) )
-         print("Processed " + repr(x/3) + " images")
+         insertor.cur.execute(query, (swayze_id, color) )
+         print("Processed " + repr(x/3) + " images. Last printed: " + swayze_id)
          x += 1
 				
 
