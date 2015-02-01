@@ -27,28 +27,28 @@ class SwayzeBaby:
 		return
 
 	def getRandSwayzeColors(self):
-		return ['http://home.comcast.net/~patrick.swayze/patrickcloseup.jpg', "#123456", "#223344", "445566"]
-		# query = """
-		# SELECT swayze.url, colors.color FROM swayze INNER JOIN colors on swayze.id = colors.swayze_id WHERE colors.fake = 0
-		# ORDER BY RAND()
-		# LIMIT 10
-		# """
-		# corner = Corner()
-		# corner.cur.execute(query)
+		# return ['http://home.comcast.net/~patrick.swayze/patrickcloseup.jpg', "#123456", "#223344", "445566"]
+		corner = Corner()
 
-		# for row in corner.cur:
-		# 	swayze_id = row[0]
+		query = """
+		SELECT swayze_id, FROM colors WHERE fake = 0
+		ORDER BY RAND()
+		LIMIT 1
+		"""
 
-		# query = "SELECT color FROM colors WHERE id = " + swayze_id 
+		corner.cur.execute(query)
 
-		# corner.cur.execute(query)
+		for row in corner.cur:
+			swayze_id = row[0]
 
-		# colors = []
-		# colors.append(url)
-		# corner.cur.execute("SELECT color FROM colors WHERE swayze_id = " + swayze_id)
-		# for row in corner.cur:
-		# 	colors.append(row[0])
-		# return colors
+		query = "SELECT swayze.url, colors.color FROM swayze INNER JOIN colors ON swayze.id = colors.swayze_id WHERE swayze_id = " + swayze_id 
+
+		corner.cur.execute(query)
+		colors = []
+		for row in corner.cur:
+			url = row[0]
+			colors.append(row[1])
+		return [url, colors]
 
 
 
