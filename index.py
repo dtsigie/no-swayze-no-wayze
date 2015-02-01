@@ -19,8 +19,10 @@ print "</head>"
 print "<body>"
 print "<div id='container'>"
 colors = roadHouse.getRandSwayzeColors()
-	# print """<img src='{0}' align='middle'></img> """.format(roadHouse.image)
-	#Put swayze in center, baby.
+for (color in colors):
+	
+	# Print """<img src='{0}' align='middle'></img> """.format(roadHouse.image)
+	# Put swayze in center, baby.
 
 print "</div>"
 print "</body>"

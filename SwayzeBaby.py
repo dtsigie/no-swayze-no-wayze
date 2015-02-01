@@ -28,7 +28,7 @@ class SwayzeBaby:
 
 	def getRandSwayzeColors(self):
 		query = """
-		SELECT id, url FROM table WHERE fake=0
+		SELECT color.swayze_id FROM colors WHERE colors.fake = 0
 		ORDER BY RAND()
 		LIMIT 1
 		"""
@@ -37,7 +37,11 @@ class SwayzeBaby:
 
 		for row in corner.cur:
 			swayze_id = row[0]
-			url = row[1]
+
+		query = """
+			
+		"""
+
 
 		colors = []
 		colors.append(url)
@@ -92,7 +96,7 @@ class SwayzeBaby:
 
                         # show our color bart
                         return colors
-                except cv2.error as e:
+                except(HTTPError, cv2.error as e):
                         print("Image processing failed. Moving on...")
                         
                         
