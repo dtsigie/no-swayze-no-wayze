@@ -20,17 +20,17 @@ color2 = colors[1][1]
 color3 = colors[1][2]
 print """<style>
 
-#box1 {
-	background-color: {0},	
-}
+#box1 {{
+	background-color: {0};	
+}}
 
-#box2 {
-	background-color: {1},	
-}
+#box2 {{
+	background-color: {1};	
+}}
 
-#box3 {
-	background-color: {2},
-}
+#box3 {{
+	background-color: {2};
+}}
 
 </style>
 """.format(color1, color2, color3)
@@ -41,8 +41,13 @@ print "</head>"
 print "<body>"
 print "<div id='container'>"
 
+
 print "<div id='swayzeImage' align='middle' class='box'>"
 print "<img src='" + url + "'></img>" 
+print "</div>"
+
+print "<div id='title' class='bigLetters'>"
+print "<span>NO SWAYZE NO WAYZE</span>"
 print "</div>"
 
 print "<div id='box1' class='box'>"
