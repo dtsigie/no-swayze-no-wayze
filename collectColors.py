@@ -8,7 +8,7 @@ x = 1
 swayze = SwayzeBaby()
 selector = Corner()
 insertor = Corner()
-startId = 0
+startId = 2978
 selector.query("SELECT id, url FROM swayze where fake=0 AND id >= " + repr(startId))
 for row in selector.cur:
    swayze_id = row[0]
