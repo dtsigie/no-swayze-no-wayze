@@ -8,8 +8,13 @@ x = 1
 swayze = SwayzeBaby()
 selector = Corner()
 insertor = Corner()
-startId = 0
-selector.query("SELECT id, url FROM swayze where fake=0 AND id >= " + repr(startId))
+query = "SELECT MAX(swayze_id) FROM `colors` WHERE fake=0"
+selector.cur.execute(query)
+for row in selector.cur:
+	largest = row[0]
+
+startID = largest
+selector.query("SELECT id, url FROM swayze where fake=0 AND id > " + repr(startId))
 for row in selector.cur:
    swayze_id = row[0]
    url = row[1]
