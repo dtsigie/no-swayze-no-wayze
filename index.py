@@ -20,22 +20,22 @@ print "<body>"
 print "<div id='container'>"
 colors = roadHouse.getRandSwayzeColors()
 url = colors[0]
-color1 = colors[1][1]
-color2 = colors[1][2]
-color3 = colors[1][3]
+color1 = colors[1][0]
+color2 = colors[1][1]
+color3 = colors[1][2]
 print "<div id='swayzeImage' align='middle' class='box'>"
 print "<img src='" + url + "'></img>" 
 print "</div>"
 
-print "<div id='box1' class='box' background='" + color1 + "'>"
+print "<div id='box1' class='box' background-color=" + color1 + ">"
 print "<span class='bigLetters'>ABOUT SWAYZE</span>"
 print "</div>"
 
-print "<div id='box2' class='box' background='" + color2 + "'>"
+print "<div id='box2' class='box' background-color=" + color2 + ">"
 print "<span class='bigLetters'>HISTOSWAYZE</span>"
 print "</div>"
 
-print "<div id='box3' class='box' background='" + color3 + "'>"
+print "<div id='box3' class='box' background-color=" + color3 + ">"
 print "<span class='bigLetters'>STREAMSWAYZE</span>"
 print "</div>"
 

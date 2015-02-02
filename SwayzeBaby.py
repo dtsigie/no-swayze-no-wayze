@@ -31,7 +31,7 @@ class SwayzeBaby:
 		corner = Corner()
 
 		query = """
-		SELECT swayze_id, FROM colors WHERE fake = 0
+		SELECT swayze_id FROM colors WHERE fake = 0
 		ORDER BY RAND()
 		LIMIT 1
 		"""
@@ -41,7 +41,7 @@ class SwayzeBaby:
 		for row in corner.cur:
 			swayze_id = row[0]
 
-		query = "SELECT swayze.url, colors.color FROM swayze INNER JOIN colors ON swayze.id = colors.swayze_id WHERE swayze_id = " + swayze_id 
+		query = "SELECT swayze.url, colors.color FROM swayze INNER JOIN colors ON swayze.id = colors.swayze_id WHERE swayze_id = " + str(swayze_id) 
 
 		corner.cur.execute(query)
 		colors = []
