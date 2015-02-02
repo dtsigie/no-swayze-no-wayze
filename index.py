@@ -13,29 +13,47 @@ print "<head>"
 print "<title>No Swayze No Wayze</title>"
 print '<link rel="stylesheet" type="text/css" href="css.css">'
 # print roadHouse.CSSwayze()
-print "</head>"
-
-#Body stuff.
-print "<body>"
-print "<div id='container'>"
 colors = roadHouse.getRandSwayzeColors()
 url = colors[0]
 color1 = colors[1][0]
 color2 = colors[1][1]
 color3 = colors[1][2]
+print """<style>
+
+#box1 {
+	background-color: {0},	
+}
+
+#box2 {
+	background-color: {1},	
+}
+
+#box3 {
+	background-color: {2},
+}
+
+</style>
+""".format(color1, color2, color3)
+
+print "</head>"
+
+#Body stuff.
+print "<body>"
+print "<div id='container'>"
+
 print "<div id='swayzeImage' align='middle' class='box'>"
 print "<img src='" + url + "'></img>" 
 print "</div>"
 
-print "<div id='box1' class='box' background-color=" + color1 + ">"
+print "<div id='box1' class='box'>"
 print "<span class='bigLetters'>ABOUT SWAYZE</span>"
 print "</div>"
 
-print "<div id='box2' class='box' background-color=" + color2 + ">"
+print "<div id='box2' class='box'>"
 print "<span class='bigLetters'>HISTOSWAYZE</span>"
 print "</div>"
 
-print "<div id='box3' class='box' background-color=" + color3 + ">"
+print "<div id='box3'  class='box'>"
 print "<span class='bigLetters'>STREAMSWAYZE</span>"
 print "</div>"
 

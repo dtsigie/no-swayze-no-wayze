@@ -3,13 +3,11 @@
     margin:auto; 
     height:auto;  
     overflow:auto;
-    background-color: #f4f0ef;
 }
 
 .box {
     margin: 0 auto; width: 960px;
     height: 400px;
-    background-color: #FFFFFF;
 }
 
 .bigLetters {
