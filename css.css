@@ -1,0 +1,40 @@
+p {
+    font-family: "Times New Roman", Times, serif;
+}
+
+#title {
+    margin: 0 auto;
+    height: 100px;
+}
+
+#subtitle {
+    text-align: center;
+    
+}
+
+#container{
+    width:100%;
+    margin:auto; 
+    height:auto;  
+    overflow:auto;
+}
+img {
+    max-height: 100%;
+    max-width: 100%;
+	
+}
+
+.box {
+    margin: 0 auto;
+    height: 300px;
+    text-align: center;
+}
+
+.bigLetters {
+    font-size: 500%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-family: Georgia, serif;
+    text-align: center;
+    vertical-align: middle;
+}
