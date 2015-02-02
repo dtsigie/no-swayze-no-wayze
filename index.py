@@ -49,6 +49,11 @@ print "</div>"
 print "<div id='title' class='bigLetters'>"
 print "<span>NO SWAYZE NO WAYZE</span>"
 print "</div>"
+print "<hr></hr>"
+print "<div id='subtitle'/>"
+print "<p style='font-size:250%'>Swayze color analysis</p>"
+print "</div>"
+
 
 print "<div id='box1' class='box'>"
 print "<span class='bigLetters'>ABOUT SWAYZE</span>"
