@@ -70,3 +70,8 @@ img {
     right: 0px;
     opacity: 0.6;
 }
+
+.mainText {   
+    opacity: 0.6;
+    background-color: white;
+}
