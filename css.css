@@ -74,4 +74,6 @@ img {
 .mainText {   
     opacity: 0.6;
     background-color: white;
+    width: 50%;
+    text-align: center;
 }
