@@ -43,6 +43,7 @@ img {
 }
 
 .box {
+    position: relative;
     margin: 0 auto;
     height: 300px;
     text-align: center;
@@ -57,9 +58,9 @@ img {
     vertical-align: middle;
 }
 
-.bottomRight { 
+.box .bottomRight {
+    font-size: 125%; 
     position: absolute;
     bottom: 5px;
     right: 5px;
-    text-align: right; 
 }

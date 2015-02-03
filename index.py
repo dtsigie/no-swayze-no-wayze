@@ -56,7 +56,7 @@ print "</div>"
 
 
 print "<div id='box1' class='box'>"
-print "<span class='bigLetters'><a href=''>ABOUT</span>"
+print "<span class='bigLetters'><a href=''>ABOUT</a></span>"
 print "<p class='bottomRight'>{0}</p>".format(color1)
 print "</div>"
 
