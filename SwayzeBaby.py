@@ -99,15 +99,6 @@ class SwayzeBaby:
 		except (urllib2.HTTPError, urllib2.URLError, cv2.error) as e:
 
                         print("Image processing failed. Moving on...")
-                        
-                        
-              
-
-
-
-	
-
-
 	#Returns out html-parseable css involving our color schemes.
 	def CSSwayze(self):
 		colorScheme = self.getColorScheme()

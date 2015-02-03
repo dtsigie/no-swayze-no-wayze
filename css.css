@@ -56,3 +56,10 @@ img {
     text-align: center;
     vertical-align: middle;
 }
+
+.bottomRight { 
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-align: right; 
+}
