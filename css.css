@@ -60,13 +60,13 @@ img {
 
 .box .bottomRight {
     font-size: 125%; 
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
 }
 
 .textBox {
-    height: 1em;
     width: 7em;
-    background-color: white
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0.6;
 }

@@ -51,7 +51,7 @@ print "<span>NO SWAYZE NO WAYZE</span>"
 print "</div>"
 print "<hr></hr>"
 print "<div id='subtitle'/>"
-print "<p style='font-size:250%'>Swayze color analysis</p>"
+print "<p style='font-size:250%'>Swayze based color schemes for the web</p>"
 print "</div>"
 
 
@@ -63,14 +63,14 @@ print "</div>"
 print "</div>"
 
 print "<div id='box2' class='box'>"
-print "<span class='bigLetters'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeApp'>HISTOGRAM | 3D</a></span>"
+print "<span class='bigLetters'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeApp'>DATA VIZ</a></span>"
 print "<div class='textBox'>"
 print "<p class='bottomRight'>{0}</p>".format(color2)
 print "</div>"
 print "</div>"
 
 print "<div id='box3'  class='box'>"
-print "<span class='bigLetters'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeStreamApp'>STREAMPLOT</a></span>"
+print "<span class='bigLetters'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeStreamApp'>SWAYZE STREAM</a></span>"
 print "<div class='textBox'>"
 print "<p class='bottomRight'>{0}</p>".format(color3)
 print "</div>"
