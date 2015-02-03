@@ -57,17 +57,23 @@ print "</div>"
 
 print "<div id='box1' class='box'>"
 print "<span class='bigLetters'><a href=''>ABOUT</a></span>"
+print "<div class='textBox'>"
 print "<p class='bottomRight'>{0}</p>".format(color1)
+print "</div>"
 print "</div>"
 
 print "<div id='box2' class='box'>"
 print "<span class='bigLetters'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeApp'>HISTOGRAM | 3D</a></span>"
+print "<div class='textBox'>"
 print "<p class='bottomRight'>{0}</p>".format(color2)
+print "</div>"
 print "</div>"
 
 print "<div id='box3'  class='box'>"
 print "<span class='bigLetters'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeStreamApp'>STREAMPLOT</a></span>"
+print "<div class='textBox'>"
 print "<p class='bottomRight'>{0}</p>".format(color3)
+print "</div>"
 print "</div>"
 
 

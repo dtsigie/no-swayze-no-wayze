@@ -64,3 +64,9 @@ img {
     bottom: 5px;
     right: 5px;
 }
+
+.textBox {
+    height: 1em;
+    width: 7em;
+    background-color: white
+}
