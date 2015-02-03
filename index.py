@@ -60,11 +60,11 @@ print "<span class='bigLetters'>ABOUT SWAYZE</span>"
 print "</div>"
 
 print "<div id='box2' class='box'>"
-print "<span class='bigLetters'>HISTOSWAYZE</span>"
+print "<span class='bigLetters'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeApp'>HISTOSWAYZE</a></span>"
 print "</div>"
 
 print "<div id='box3'  class='box'>"
-print "<span class='bigLetters'>STREAMSWAYZE</span>"
+print "<span class='bigLetters'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeStreamApp'>STREAMSWAYZE</a></span>"
 print "</div>"
 
 
