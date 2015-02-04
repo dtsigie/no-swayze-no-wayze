@@ -1,9 +1,9 @@
 #!/usr/bin/env python # -*- coding: UTF-8 -*-
 
 #import cv2, the sklearn kmeans function, and numpy
-# from sklearn.cluster import KMeans
-# import numpy as np
-# import cv2
+from sklearn.cluster import KMeans
+import numpy as np
+import cv2
 ##enable debugging
 import urllib
 import urllib2
@@ -65,7 +65,9 @@ class SwayzeBaby:
 
 	#Turns self.image into a histogram to generate. 
 	def getColorScheme(self, url):
+	# try-catch for error detection, allowing us to bypass bad URLs and other errors
                 try: 
+				# pull a picture from a URL, turn it to a bytearray, then decode it for analysis
                         req = urllib2.urlopen(url)
                         arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
                         img = cv2.imdecode(arr,-1)
@@ -76,12 +78,11 @@ class SwayzeBaby:
                         # reshape the image to be a list of pixels
                         image = image.reshape((-1, 3))
 
-                                # cluster the pixel intensities
+                                # cluster the pixel intensities into 3 clusters
                         clt = KMeans(n_clusters = 3)
                         clt.fit(image)
 
-                                # build a histogram of clusters and then create a figure
-                                # representing the number of pixels labeled to each color
+                                # build a histogram of clusters and then store the centroids of these clusters in a list
                         hist = centroid_histogram(clt)
                         hist = clt.cluster_centers_
                         colors = list()
@@ -94,9 +95,9 @@ class SwayzeBaby:
 
 
 
-                        # show our color bart
+                        # return the colors in hex format
                         return colors
-		except (urllib2.HTTPError, urllib2.URLError, cv2.error) as e:
+		except (urllib2.HTTPError, urllib2.URLError, Exception, cv2.error) as e:
 
                         print("Image processing failed. Moving on...")
 	#Returns out html-parseable css involving our color schemes.
