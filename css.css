@@ -45,7 +45,7 @@ img {
 .box {
     position: relative;
     margin: 0 auto;
-    height: 300px;
+    height: 200px;
     text-align: center;
 }
 
@@ -108,7 +108,8 @@ li a:hover {
 #topLayer { 
     position:relative; 
     z-index: 2;
-    height: 700px; 
+    background: white;
+    height: 600px; 
     } 
 #revealed-section { 
     position:fixed;
@@ -117,5 +118,7 @@ li a:hover {
 } 
 
 #revealed-section-placeholder {
-    height: 400px;
-} 
+    height: 900px;
+}
+
+body{margin:0;} 
