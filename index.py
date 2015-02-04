@@ -55,8 +55,9 @@ print "<p style='font-size:250%'>Swayze based color schemes for the web</p>"
 print "</div>"
 
 print "<div class='mainText'>"
-print """<p>No Swayze No Wayze is the attractive brainchild of Cornell College (Mount Vernon, IA) students Brian 
-Hixson-Simeral, Alex Hubers, Kent Schlorf, and Dawit Tsigie. Click below for more details. </p>
+print """<p>Brian Hixson-Simeral, Alex Hubers, Kent Schlorf, Dawit Tsigie</p>
+
+<p>Cornell College. Mount Vernon, IA.</p>
 <ul>
 <li><a href='fullWriteUp.pdf'>Full Write-up</a> </li>
 <li><a href='https://docs.google.com/presentation/d/1Vr0AP1aMLPH6XotAbR5BTNFdEmlsRMAeUcv5vHSvJQ4/edit?usp=sharing'>Presentation Slides</a> </li>
