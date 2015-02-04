@@ -24,11 +24,6 @@ class Corner:
 		self.cur = self.conn.cursor()
 	def query(self, query):
 		self.cur.execute(query)
-	def lastInsert(self):
-		query = "SELECT LAST_INSERT_ID() as id;"
-		result = self.query(query)
-		return result
-
 ```
 
 ##How To
