@@ -9,7 +9,7 @@ a {
 
 a:hover 
 {
-     color:inherit;  
+      
      cursor:pointer;  
 }
 
@@ -72,8 +72,10 @@ img {
 }
 
 .mainText {   
-    opacity: 0.6;
-    background-color: white;
-    width: 50%;
+    width: 70%;
     text-align: center;
+    margin: 0 auto;
+    font-size: 143%;
 }
+
+
