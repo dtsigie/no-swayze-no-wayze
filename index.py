@@ -40,7 +40,7 @@ print "</head>"
 #Body stuff.
 print "<body>"
 print "<div id='container'>"
-
+print "<div id='topLayer'>"
 
 print "<div id='swayzeImage' align='middle' class='box'>"
 print "<img src='" + url + "'></img>" 
@@ -56,14 +56,14 @@ print "</div>"
 
 print "<div class='mainText'>"
 print """<p>Brian Hixson-Simeral, Alex Hubers, Kent Schlorf, Dawit Tsigie</p>
-
 <p>Cornell College. Mount Vernon, IA.</p>
 <ul>
 <li><a href='fullWriteUp.pdf'>Full Write-up</a> </li>
 <li><a href='https://docs.google.com/presentation/d/1Vr0AP1aMLPH6XotAbR5BTNFdEmlsRMAeUcv5vHSvJQ4/edit?usp=sharing'>Presentation Slides</a> </li>
 <ul>"""
 print "</div>"
-
+print "</div>"
+print "<div id='revealed-section'>"
 print "<div id='box1' class='box'>"
 print "<span class='bigLetters'><a href='https://github.com/ahubers/no-swayze-no-wayze'>SOURCE CODE</a></span>"
 print "<div class='textBox'>"
@@ -83,6 +83,8 @@ print "<span class='bigLetters'><a href='http://swayzeallthewayze.shinyapps.io/S
 print "<div class='textBox'>"
 print "<p class='bottomRight'>{0}</p>".format(color3)
 print "</div>"
+print "</div>"
+
 print "</div>"
 
 print "</div>"
