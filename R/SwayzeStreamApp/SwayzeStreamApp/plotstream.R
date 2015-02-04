@@ -1,3 +1,5 @@
+#This all stolen from https://gist.github.com/menugget/7864454
+
 #plot.stream makes a "stream plot" where each y series is plotted 
 #as stacked filled polygons on alternating sides of a baseline.
 #
