@@ -52,7 +52,7 @@ img {
 #swayzeImage {
     position: relative;
     margin: 0 auto;
-    height: 300px;
+    height: 270px;
     text-align: center;
 }
 
@@ -89,6 +89,8 @@ img {
 ul {
     margin-bottom: 14px;
     list-style: none;
+    width: 40%;
+    margin: auto;
 }
 li { 
     width: 300px; 
@@ -128,7 +130,7 @@ li a:hover {
 } 
 
 #revealed-section-placeholder {
-    height: 1000px;
+    height: 650px;
 }
 
 body{margin:0;} 
