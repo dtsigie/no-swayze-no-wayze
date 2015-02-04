@@ -9,6 +9,7 @@ print "Content-Type: text/html\n\n"
 roadHouse = SwayzeBaby()
 
 print "<head>"
+print "<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >"
 print "<title>No Swayze No Wayze</title>"
 print '<link rel="stylesheet" type="text/css" href="css.css">'
 # print roadHouse.CSSwayze()
@@ -50,7 +51,7 @@ print "<span>NO SWAYZE NO WAYZE</span>"
 print "</div>"
 print "<hr></hr>"
 print "<div id='subtitle'/>"
-print "<p style='font-size:250%'>Swayze based color schemes for the web</p>"
+print "<p style='font-size:250%'>Swayze based color schemes, analysis, and data viz</p>"
 print "</div>"
 
 print "<div class='mainText'>"
