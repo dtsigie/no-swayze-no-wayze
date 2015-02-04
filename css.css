@@ -104,3 +104,13 @@ li a {
 li a:hover { 
     background-color: #EFEFEF; 
 }
+
+#topLayer { 
+    position:relative; 
+    z-index: 2; 
+    } 
+#revealed-section { 
+    position:fixed;
+    bottom:0;
+    width:100%;
+} 
