@@ -14,7 +14,7 @@ This is a multi-function repository. First of all, it functions as a [website](h
 
 ##Hidden Files
 * corner.py - This is a wrapper class for our SQL access, and uses PyMySQL to perform queries, etc. It is not included but has the following format:
-```
+```python
 import pymysql
 #Wrapper for SQL.
 class Corner:
@@ -47,8 +47,7 @@ Writing your own corner.py and throwing these files on your webserver should mak
 ##Hidden Files
 * corner.py (see above)
 * keys/key.py - this file has the following format. It's literally just a wrapper for a Bing API key.
-```
-#!/usr/bin/env python # -*- coding: UTF-8 -*-
+```python
 class Key:
 	def __init__(self):
 		return
