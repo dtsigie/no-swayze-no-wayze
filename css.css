@@ -121,7 +121,7 @@ li a:hover {
     position:relative; 
     z-index: 2;
     background: white;
-    height: 700px; 
+    height: 790px; 
     } 
 #revealed-section { 
     position:fixed;
@@ -130,7 +130,7 @@ li a:hover {
 } 
 
 #revealed-section-placeholder {
-    height: 650px;
+    height: 740px;
 }
 
 body{margin:0;} 
