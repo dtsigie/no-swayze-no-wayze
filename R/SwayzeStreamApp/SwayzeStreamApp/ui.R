@@ -14,9 +14,7 @@ shinyUI(fluidPage(
                            "Cyan" = "Cyan",
                            "Blue" = "Blue",
                            "Purple" = "Purple"),
-                         selected = c("Red", "Yellow", "Green", "Cyan", "Blue", "Purple")),
-      
-      submitButton("search")
+                         selected = c("Red", "Yellow", "Green", "Cyan", "Blue", "Purple"))
                   
       #numericInput("breakNum", "Number of Columns", "5", min = 5, max = 25)
       

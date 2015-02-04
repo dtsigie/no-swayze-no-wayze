@@ -17,7 +17,6 @@ shinyServer(
         moviesWithColors = swayzeMovie[,(names(swayzeMovie) %in% colors)]
         x = seq(28)
         y = as.matrix(moviesWithColors)
-        View(moviesWithColors)
         plot.stream(x,y, col=names(moviesWithColors))
       })
 
