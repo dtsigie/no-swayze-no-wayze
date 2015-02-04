@@ -72,8 +72,8 @@ As described above, SwayzeBaby.py is a multi-purpose class for all things Swayze
 * [scatterPlot3d](http://cran.r-project.org/web/packages/scatterplot3d/index.html)
 
 ##Files Used
-* SwayzeApp/ (folder)
-* SwayzeStreamApp/ (folder)
+* R/SwayzeApp/ (folder)
+* R/SwayzeStreamApp/ (folder)
 
 ##Hidden Files
 No hidden files necessary for these to run. All data stored/loaded from .rdata files. 
