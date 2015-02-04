@@ -54,18 +54,17 @@ print "<div id='subtitle'/>"
 print "<p style='font-size:250%'>Swayze based color schemes for the web</p>"
 print "</div>"
 
-
-print "<div id='box1' class='box'>"
-print "<span class='bigLetters'>ABOUT</span>"
 print "<div class='mainText'>"
-print """<p>No Swayze No Wayze is the attractive brainchild of Cornell College (Mount Vernon, IA) students Alex Hubers, Brian 
-Hixson-Simeral, Kent Schlorf, and Dawit Tsigie. Click below for more details. </p>
+print """<p>No Swayze No Wayze is the attractive brainchild of Cornell College (Mount Vernon, IA) students Brian 
+Hixson-Simeral, Alex Hubers, Kent Schlorf, and Dawit Tsigie. Click below for more details. </p>
 <ul>
 <li><a href='fullWriteUp.pdf'>Full Write-up</a> </li>
-<li><a href='https://github.com/ahubers/no-swayze-no-wayze'>Source Code</a> </li>
 <li><a href='https://docs.google.com/presentation/d/1Vr0AP1aMLPH6XotAbR5BTNFdEmlsRMAeUcv5vHSvJQ4/edit?usp=sharing'>Presentation Slides</a> </li>
 <ul>"""
 print "</div>"
+
+print "<div id='box1' class='box'>"
+print "<span class='bigLetters'><a href='https://github.com/ahubers/no-swayze-no-wayze'>SOURCE CODE</a></span>"
 print "<div class='textBox'>"
 print "<p class='bottomRight'>{0}</p>".format(color1)
 print "</div>"
@@ -84,12 +83,6 @@ print "<div class='textBox'>"
 print "<p class='bottomRight'>{0}</p>".format(color3)
 print "</div>"
 print "</div>"
-
-
-# for (color in colors):
-
-	# Print """<img src='{0}' align='middle'></img> """.format(roadHouse.image)
-	# Put swayze in center, baby.
 
 print "</div>"
 print "</body>"
