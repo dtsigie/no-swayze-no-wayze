@@ -4,19 +4,16 @@ This is a multi-function repository. First of all, it functions as a [website](a
 
 #Website
 ##Dependencies
-*Python running on your web server.
-*[PyMySQL](https://github.com/PyMySQL/PyMySQL)
+* Python running on your web server.
+* [PyMySQL](https://github.com/PyMySQL/PyMySQL)
 
 ##Files Used
-SwayzeBaby.py
-index.py
-css.css
-
-##How To
-Writing your own corner.py and throwing these files on your webserver should make all files run, however you of course would need your own MySQL database filled with Swayzes. So that kind of knicks that idea in the butt.
+* SwayzeBaby.py
+* index.py
+* css.css
 
 ##Hidden Files
-*corner.py - This is a wrapper class for our SQL access, and uses PyMySQL to perform queries, etc. It is not included but has the following format:
+* corner.py - This is a wrapper class for our SQL access, and uses PyMySQL to perform queries, etc. It is not included but has the following format:
 ```
 import pymysql
 #Wrapper for SQL.
@@ -33,6 +30,10 @@ class Corner:
 		return result
 
 ```
+
+##How To
+Writing your own corner.py and throwing these files on your webserver should make all files run, however you of course would need your own MySQL database filled with Swayzes. So that kind of knicks that idea in the butt.
+
 
 
 #Data Collection
