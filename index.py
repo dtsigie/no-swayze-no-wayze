@@ -6,7 +6,6 @@ import cgitb
 cgitb.enable()
 from SwayzeBaby import SwayzeBaby
 print "Content-Type: text/html\n\n"
-print
 roadHouse = SwayzeBaby()
 
 print "<head>"
@@ -58,11 +57,11 @@ print "<div class='mainText'>"
 print """<p>Brian Hixson-Simeral, Alex Hubers, Kent Schlorf, Dawit Tsigie</p>
 <p>Cornell College. Mount Vernon, IA.</p>
 <ul>
-<li class='download'><a href='fullWriteUp.pdf'>full write-up</a> </li>
-<li><a href='https://docs.google.com/presentation/d/1Vr0AP1aMLPH6XotAbR5BTNFdEmlsRMAeUcv5vHSvJQ4/edit?usp=sharing'>presentation slides</a> </li>
-<li><a href='https://github.com/ahubers/no-swayze-no-wayze'>source code</a></li>"
-<li><a href='http://swayzeallthewayze.shinyapps.io/SwayzeApp'>data visualization</a></li>"
-<li><a href='http://swayzeallthewayze.shinyapps.io/SwayzeStreamApp'>stream graph</a></li>"
+<li class='download, orange'><a href='fullWriteUp.pdf'>full write-up</a> </li>
+<li class='blue'><a href='https://docs.google.com/presentation/d/1Vr0AP1aMLPH6XotAbR5BTNFdEmlsRMAeUcv5vHSvJQ4/edit?usp=sharing'>presentation slides</a> </li>
+<li class='green'><a href='https://github.com/ahubers/no-swayze-no-wayze'>source code</a></li>
+<li class='purple'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeApp'>data visualization</a></li>
+<li class='gold'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeStreamApp'>stream graph</a></li>
 <ul>"""
 print "</div>"
 print "</div>"
