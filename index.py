@@ -42,7 +42,7 @@ print "<body>"
 print "<div id='container'>"
 print "<div id='topLayer'>"
 
-print "<div id='swayzeImage' align='middle' class='box'>"
+print "<div id='swayzeImage' align='middle'>"
 print "<img src='" + url + "'></img>" 
 print "</div>"
 

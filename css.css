@@ -49,6 +49,13 @@ img {
     text-align: center;
 }
 
+#swayzeImage {
+    position: relative;
+    margin: 0 auto;
+    height: 300px;
+    text-align: center;
+}
+
 .bigLetters {
     font-size: 500%;
     -webkit-text-stroke-width: 1px;
@@ -109,7 +116,7 @@ li a:hover {
     position:relative; 
     z-index: 2;
     background: white;
-    height: 600px; 
+    height: 700px; 
     } 
 #revealed-section { 
     position:fixed;
@@ -118,7 +125,7 @@ li a:hover {
 } 
 
 #revealed-section-placeholder {
-    height: 900px;
+    height: 1000px;
 }
 
 body{margin:0;} 
