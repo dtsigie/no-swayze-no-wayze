@@ -63,6 +63,8 @@ print """<p>Brian Hixson-Simeral, Alex Hubers, Kent Schlorf, Dawit Tsigie</p>
 <ul>"""
 print "</div>"
 print "</div>"
+
+print '<div id="revealed-section-placeholder"></div>'
 print "<div id='revealed-section'>"
 print "<div id='box1' class='box'>"
 print "<span class='bigLetters'><a href='https://github.com/ahubers/no-swayze-no-wayze'>SOURCE CODE</a></span>"

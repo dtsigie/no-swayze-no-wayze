@@ -107,10 +107,15 @@ li a:hover {
 
 #topLayer { 
     position:relative; 
-    z-index: 2; 
+    z-index: 2;
+    height: 700px; 
     } 
 #revealed-section { 
     position:fixed;
     bottom:0;
     width:100%;
+} 
+
+#revealed-section-placeholder {
+    height: 400px;
 } 
