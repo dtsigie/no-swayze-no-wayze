@@ -43,7 +43,7 @@ print "<div id='container'>"
 print "<div id='topLayer'>"
 
 print "<div id='swayzeImage' align='middle'>"
-print "<img src='" + url + "'></img>" 
+print "<a href=''><img src='" + url + "'></img></a>" 
 print "</div>"
 
 print "<div id='title' class='bigLetters'>"
@@ -55,11 +55,14 @@ print "<p style='font-size:250%'>Swayze based color schemes, analysis, and data 
 print "</div>"
 
 print "<div class='mainText'>"
+#This stuff was only really for handing the project in.
 print """<p>Brian Hixson-Simeral, Alex Hubers, Kent Schlorf, Dawit Tsigie</p>
 <p>Cornell College. Mount Vernon, IA.</p>
-<ul>
-<li class='download, orange'><a href='fullWriteUp.pdf'>full write-up</a> </li>
-<li class='blue'><a href='https://docs.google.com/presentation/d/1Vr0AP1aMLPH6XotAbR5BTNFdEmlsRMAeUcv5vHSvJQ4/edit?usp=sharing'>presentation slides</a> </li>
+<ul>"""
+#<li class='download, orange'><a href='fullWriteUp.pdf'>full write-up</a> </li>
+#<li class='blue'><a href='https://docs.google.com/presentation/d/1Vr0AP1aMLPH6XotAbR5BTNFdEmlsRMAeUcv5vHSvJQ4/edit?usp=sharing'>presentation slides</a> </li>"""
+
+print """
 <li class='green'><a href='https://github.com/ahubers/no-swayze-no-wayze'>source code</a></li>
 <li class='purple'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeApp'>data visualization</a></li>
 <li class='gold'><a href='http://swayzeallthewayze.shinyapps.io/SwayzeStreamApp'>stream graph</a></li>
