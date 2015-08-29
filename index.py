@@ -4,7 +4,7 @@
 # enable debugging
 import cgitb
 cgitb.enable()
-from SwayzeBaby import SwayzeBaby
+from core.SwayzeBaby import SwayzeBaby
 print "Content-Type: text/html\n\n"
 roadHouse = SwayzeBaby()
 
