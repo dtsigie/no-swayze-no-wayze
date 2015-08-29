@@ -1,5 +1,5 @@
 import pymysql
-import envVariables
+from envVariables import *
 
 #Wrapper for SQL.
 class Corner:
