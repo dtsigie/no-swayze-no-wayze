@@ -11,13 +11,14 @@ roadHouse = SwayzeBaby()
 print "<head>"
 print "<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >"
 print "<title>No Swayze No Wayze</title>"
-print '<link rel="stylesheet" type="text/css" href="css.css">'
+print '<link rel="stylesheet" type="text/css" href="assets/css/css.css">'
 # print roadHouse.CSSwayze()
 colors = roadHouse.getRandSwayzeColors()
 url = colors[0]
 color1 = colors[1][0]
 color2 = colors[1][1]
 color3 = colors[1][2]
+# Dynamically include CSS.
 print """<style>
 
 #box1 {{

@@ -17,7 +17,6 @@ import json
 
 #Keep our db stuff wrapped up in a hidden class. We are putting baby in the corner.
 from corner import Corner
-from keys.key import Key
 
 
 class SwayzeBaby:
@@ -123,8 +122,7 @@ class SwayzeBaby:
 
 	# Retruns an image dictionary with image url as key and title as values - collected from bing search
 	def fetchAllSwayze(self, query):
-		ourKey = Key()
-		key = ourKey.getKey()
+		key = os.environ['BING_KEY']
 		
 		query = urllib.quote(query)
 		skip = 0
