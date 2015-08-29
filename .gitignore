@@ -1,2 +1,5 @@
 pymysql
 .htaccess
+
+favicon.gif
+*.pyc
