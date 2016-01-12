@@ -1,0 +1,8 @@
+pymysql
+.htaccess
+
+favicon.gif
+*.pyc
+
+# Hide our env variables
+core/envVariables.py
